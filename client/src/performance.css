@@ -1,0 +1,78 @@
+/* Performance Optimizations */
+
+/* Lazy Loading Images */
+.lazy-image {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* Reduce Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* GPU Acceleration */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Optimize Scrolling */
+.smooth-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Content Visibility for Large Lists */
+.list-item {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 100px;
+}
+
+/* Optimize Fonts */
+@font-face {
+  font-family: 'System';
+  font-display: swap;
+}
+
+/* Reduce Repaints */
+.no-repaint {
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize Images */
+img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Virtual Scrolling Container */
+.virtual-scroll-container {
+  overflow-y: auto;
+  height: 100%;
+  position: relative;
+}
+
+.virtual-scroll-spacer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.virtual-scroll-content {
+  position: relative;
+}

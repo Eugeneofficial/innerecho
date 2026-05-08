@@ -1,0 +1,286 @@
+/* Telegram-style Meal Cards */
+
+.meal-card {
+  background: var(--tg-bg-content);
+  border-radius: var(--tg-radius);
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 2px var(--tg-shadow);
+  transition: var(--tg-transition);
+  animation: messageBubble 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.meal-card:hover {
+  box-shadow: 0 2px 8px var(--tg-shadow-hover);
+  transform: translateY(-1px);
+}
+
+.meal-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.meal-card-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--tg-blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.meal-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.meal-card-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--tg-text);
+  margin-bottom: 2px;
+}
+
+.meal-card-time {
+  font-size: 13px;
+  color: var(--tg-text-secondary);
+}
+
+.meal-card-content {
+  margin-bottom: 12px;
+}
+
+.meal-card-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--tg-text);
+  margin-bottom: 8px;
+}
+
+.meal-card-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.meal-stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--tg-text-secondary);
+}
+
+.meal-stat-value {
+  font-weight: 600;
+  color: var(--tg-text);
+}
+
+.meal-stat-label {
+  font-size: 13px;
+}
+
+.meal-card-photo {
+  margin: 12px 0;
+  border-radius: var(--tg-radius-small);
+  overflow: hidden;
+  max-height: 300px;
+}
+
+.meal-card-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.meal-card-notes {
+  font-size: 14px;
+  color: var(--tg-text);
+  line-height: 1.5;
+  margin: 12px 0;
+  padding: 12px;
+  background: var(--tg-hover);
+  border-radius: var(--tg-radius-small);
+  border-left: 3px solid var(--tg-blue);
+}
+
+.meal-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--tg-border);
+}
+
+.meal-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: transparent;
+  border: none;
+  border-radius: var(--tg-radius-small);
+  color: var(--tg-text-secondary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--tg-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.meal-action-btn:hover {
+  background: var(--tg-hover);
+  color: var(--tg-text);
+}
+
+.meal-action-btn:active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.6s ease-out;
+}
+
+.meal-action-btn.active {
+  color: var(--tg-blue);
+  font-weight: 500;
+}
+
+.meal-reactions {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.reaction-btn {
+  padding: 4px 10px;
+  background: var(--tg-hover);
+  border: 1px solid var(--tg-border);
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--tg-transition);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.reaction-btn:hover {
+  background: var(--tg-blue-light);
+  border-color: var(--tg-blue);
+  transform: scale(1.05);
+}
+
+.reaction-btn.active {
+  background: var(--tg-blue-light);
+  border-color: var(--tg-blue);
+  color: var(--tg-blue);
+  font-weight: 500;
+}
+
+.reaction-count {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Telegram-style Buttons */
+.tg-button {
+  padding: 10px 20px;
+  background: var(--tg-blue);
+  color: white;
+  border: none;
+  border-radius: var(--tg-radius-small);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--tg-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.tg-button:hover {
+  background: var(--tg-blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(51, 144, 236, 0.3);
+}
+
+.tg-button:active {
+  transform: translateY(0);
+}
+
+.tg-button-secondary {
+  background: var(--tg-hover);
+  color: var(--tg-blue);
+}
+
+.tg-button-secondary:hover {
+  background: var(--tg-blue-light);
+}
+
+.tg-button-danger {
+  background: var(--tg-red);
+}
+
+.tg-button-danger:hover {
+  background: #d32f2f;
+}
+
+/* Telegram-style Input */
+.tg-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--tg-bg-content);
+  border: 1px solid var(--tg-border);
+  border-radius: var(--tg-radius-small);
+  color: var(--tg-text);
+  font-size: 15px;
+  transition: var(--tg-transition);
+}
+
+.tg-input:focus {
+  outline: none;
+  border-color: var(--tg-blue);
+  box-shadow: 0 0 0 3px rgba(51, 144, 236, 0.1);
+}
+
+.tg-input::placeholder {
+  color: var(--tg-text-secondary);
+}
+
+/* Telegram-style Badge */
+.tg-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  background: var(--tg-blue-light);
+  color: var(--tg-blue);
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tg-badge-green {
+  background: rgba(77, 205, 94, 0.15);
+  color: var(--tg-green);
+}
+
+.tg-badge-red {
+  background: rgba(229, 57, 53, 0.15);
+  color: var(--tg-red);
+}
+
+.tg-badge-orange {
+  background: rgba(255, 149, 0, 0.15);
+  color: var(--tg-orange);
+}

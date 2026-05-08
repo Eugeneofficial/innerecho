@@ -8,26 +8,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--vk-bg-content);
+  background: var(--tg-bg-content);
   border-radius: 8px;
   padding: 16px;
-  box-shadow: 0 1px 0 0 var(--vk-border), 0 0 0 1px var(--vk-shadow);
+  box-shadow: 0 1px 0 0 var(--tg-border), 0 0 0 1px var(--tg-shadow);
 }
 
 .events-header h2 {
   font-size: 16px;
   font-weight: 600;
-  color: var(--vk-text);
+  color: var(--tg-text);
   margin: 0;
 }
 
 .events-filters {
   display: flex;
   gap: 8px;
-  background: var(--vk-bg-content);
+  background: var(--tg-bg-content);
   border-radius: 8px;
   padding: 12px;
-  box-shadow: 0 1px 0 0 var(--vk-border), 0 0 0 1px var(--vk-shadow);
+  box-shadow: 0 1px 0 0 var(--tg-border), 0 0 0 1px var(--tg-shadow);
 }
 
 .filter-btn {
@@ -35,7 +35,7 @@
   background: transparent;
   border: none;
   border-radius: 8px;
-  color: var(--vk-text);
+  color: var(--tg-text);
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
@@ -43,11 +43,11 @@
 }
 
 .filter-btn:hover {
-  background: var(--vk-hover);
+  background: var(--tg-hover);
 }
 
 .filter-btn.active {
-  background: var(--vk-blue);
+  background: var(--tg-blue);
   color: white;
 }
 
@@ -58,11 +58,11 @@
 }
 
 .events-empty {
-  background: var(--vk-bg-content);
+  background: var(--tg-bg-content);
   border-radius: 8px;
   padding: 48px 24px;
   text-align: center;
-  box-shadow: 0 1px 0 0 var(--vk-border), 0 0 0 1px var(--vk-shadow);
+  box-shadow: 0 1px 0 0 var(--tg-border), 0 0 0 1px var(--tg-shadow);
 }
 
 .events-empty-icon {
@@ -72,24 +72,24 @@
 
 .events-empty-text {
   font-size: 15px;
-  color: var(--vk-text-secondary);
+  color: var(--tg-text-secondary);
   margin-bottom: 24px;
 }
 
 .events-group {
-  background: var(--vk-bg-content);
+  background: var(--tg-bg-content);
   border-radius: 8px;
   padding: 16px;
-  box-shadow: 0 1px 0 0 var(--vk-border), 0 0 0 1px var(--vk-shadow);
+  box-shadow: 0 1px 0 0 var(--tg-border), 0 0 0 1px var(--tg-shadow);
 }
 
 .events-date-header {
   font-size: 14px;
   font-weight: 600;
-  color: var(--vk-text);
+  color: var(--tg-text);
   margin-bottom: 12px;
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--vk-border);
+  border-bottom: 1px solid var(--tg-border);
 }
 
 .event-card {
@@ -97,7 +97,7 @@
   align-items: flex-start;
   gap: 12px;
   padding: 12px;
-  background: var(--vk-hover);
+  background: var(--tg-hover);
   border-radius: 8px;
   margin-bottom: 8px;
   transition: all 0.15s ease;
@@ -122,7 +122,7 @@
 .event-checkbox {
   width: 20px;
   height: 20px;
-  border: 2px solid var(--vk-border);
+  border: 2px solid var(--tg-border);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -135,12 +135,12 @@
 }
 
 .event-checkbox:hover {
-  border-color: var(--vk-blue);
+  border-color: var(--tg-blue);
 }
 
 .event-card.completed .event-checkbox {
-  background: var(--vk-blue);
-  border-color: var(--vk-blue);
+  background: var(--tg-blue);
+  border-color: var(--tg-blue);
 }
 
 .event-content {
@@ -151,13 +151,13 @@
 .event-title {
   font-size: 14px;
   font-weight: 500;
-  color: var(--vk-text);
+  color: var(--tg-text);
   margin-bottom: 4px;
 }
 
 .event-description {
   font-size: 13px;
-  color: var(--vk-text-secondary);
+  color: var(--tg-text-secondary);
   margin-bottom: 8px;
   line-height: 1.4;
 }
@@ -171,7 +171,7 @@
 .event-time,
 .event-reminder {
   font-size: 12px;
-  color: var(--vk-text-secondary);
+  color: var(--tg-text-secondary);
   display: flex;
   align-items: center;
   gap: 4px;
@@ -183,7 +183,7 @@
   background: transparent;
   border: none;
   border-radius: 50%;
-  color: var(--vk-text-secondary);
+  color: var(--tg-text-secondary);
   font-size: 16px;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -194,7 +194,7 @@
 }
 
 .event-delete:hover {
-  background: var(--vk-red);
+  background: var(--tg-red);
   color: white;
 }
 

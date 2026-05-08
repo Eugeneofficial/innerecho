@@ -19,17 +19,17 @@
 .search-icon {
   position: absolute;
   left: 12px;
-  color: var(--vk-text-secondary);
+  color: var(--tg-text-secondary);
   pointer-events: none;
 }
 
 .search-input {
   width: 100%;
   padding: 8px 36px 8px 36px;
-  background: var(--vk-hover);
-  border: 1px solid var(--vk-border);
+  background: var(--tg-hover);
+  border: 1px solid var(--tg-border);
   border-radius: 8px;
-  color: var(--vk-text);
+  color: var(--tg-text);
   font-size: 14px;
   font-family: inherit;
   transition: all 0.2s;
@@ -37,13 +37,13 @@
 
 .search-input:focus {
   outline: none;
-  background: var(--vk-bg-content);
-  border-color: var(--vk-blue);
+  background: var(--tg-bg-content);
+  border-color: var(--tg-blue);
   box-shadow: 0 0 0 3px rgba(39, 135, 245, 0.1);
 }
 
 .search-input::placeholder {
-  color: var(--vk-text-secondary);
+  color: var(--tg-text-secondary);
 }
 
 .search-clear {
@@ -53,7 +53,7 @@
   border: none;
   padding: 4px;
   cursor: pointer;
-  color: var(--vk-text-secondary);
+  color: var(--tg-text-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,8 +62,8 @@
 }
 
 .search-clear:hover {
-  background: var(--vk-hover);
-  color: var(--vk-text);
+  background: var(--tg-hover);
+  color: var(--tg-text);
 }
 
 .filter-toggle {
@@ -71,10 +71,10 @@
   align-items: center;
   gap: 6px;
   padding: 8px 12px;
-  background: var(--vk-hover);
-  border: 1px solid var(--vk-border);
+  background: var(--tg-hover);
+  border: 1px solid var(--tg-border);
   border-radius: 8px;
-  color: var(--vk-text);
+  color: var(--tg-text);
   font-size: 14px;
   font-family: inherit;
   cursor: pointer;
@@ -83,12 +83,12 @@
 }
 
 .filter-toggle:hover {
-  background: var(--vk-bg-content);
-  border-color: var(--vk-blue);
+  background: var(--tg-bg-content);
+  border-color: var(--tg-blue);
 }
 
 .filter-toggle svg {
-  color: var(--vk-text-secondary);
+  color: var(--tg-text-secondary);
 }
 
 /* Suggestions */
@@ -97,10 +97,10 @@
   top: calc(100% + 4px);
   left: 0;
   right: 0;
-  background: var(--vk-bg-content);
-  border: 1px solid var(--vk-border);
+  background: var(--tg-bg-content);
+  border: 1px solid var(--tg-border);
   border-radius: 8px;
-  box-shadow: 0 4px 16px var(--vk-shadow);
+  box-shadow: 0 4px 16px var(--tg-shadow);
   max-height: 400px;
   overflow-y: auto;
   z-index: 1000;
@@ -111,14 +111,14 @@
 }
 
 .suggestion-section + .suggestion-section {
-  border-top: 1px solid var(--vk-border);
+  border-top: 1px solid var(--tg-border);
 }
 
 .suggestion-header {
   padding: 8px 12px;
   font-size: 13px;
   font-weight: 600;
-  color: var(--vk-text-secondary);
+  color: var(--tg-text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -133,12 +133,12 @@
 }
 
 .suggestion-item:hover {
-  background: var(--vk-hover);
+  background: var(--tg-hover);
 }
 
 .suggestion-item svg {
   flex-shrink: 0;
-  color: var(--vk-text-secondary);
+  color: var(--tg-text-secondary);
 }
 
 .suggestion-content {
@@ -151,7 +151,7 @@
 
 .suggestion-name {
   font-size: 14px;
-  color: var(--vk-text);
+  color: var(--tg-text);
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
@@ -160,7 +160,7 @@
 
 .suggestion-meta {
   font-size: 12px;
-  color: var(--vk-text-secondary);
+  color: var(--tg-text-secondary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -170,10 +170,10 @@
 .search-filters {
   margin-top: 12px;
   padding: 16px;
-  background: var(--vk-bg-content);
-  border: 1px solid var(--vk-border);
+  background: var(--tg-bg-content);
+  border: 1px solid var(--tg-border);
   border-radius: 8px;
-  box-shadow: 0 2px 8px var(--vk-shadow);
+  box-shadow: 0 2px 8px var(--tg-shadow);
 }
 
 .filters-header {
@@ -182,19 +182,19 @@
   align-items: center;
   margin-bottom: 16px;
   padding-bottom: 12px;
-  border-bottom: 1px solid var(--vk-border);
+  border-bottom: 1px solid var(--tg-border);
 }
 
 .filters-header span {
   font-size: 15px;
   font-weight: 600;
-  color: var(--vk-text);
+  color: var(--tg-text);
 }
 
 .filters-clear {
   background: none;
   border: none;
-  color: var(--vk-blue);
+  color: var(--tg-blue);
   font-size: 14px;
   cursor: pointer;
   padding: 4px 8px;
@@ -203,7 +203,7 @@
 }
 
 .filters-clear:hover {
-  background: var(--vk-hover);
+  background: var(--tg-hover);
 }
 
 .filter-group {
@@ -218,7 +218,7 @@
   display: block;
   font-size: 13px;
   font-weight: 600;
-  color: var(--vk-text);
+  color: var(--tg-text);
   margin-bottom: 8px;
 }
 
@@ -231,10 +231,10 @@
 .filter-range input {
   flex: 1;
   padding: 8px 12px;
-  background: var(--vk-hover);
-  border: 1px solid var(--vk-border);
+  background: var(--tg-hover);
+  border: 1px solid var(--tg-border);
   border-radius: 6px;
-  color: var(--vk-text);
+  color: var(--tg-text);
   font-size: 14px;
   font-family: inherit;
   transition: all 0.2s;
@@ -242,22 +242,22 @@
 
 .filter-range input:focus {
   outline: none;
-  background: var(--vk-bg-content);
-  border-color: var(--vk-blue);
+  background: var(--tg-bg-content);
+  border-color: var(--tg-blue);
 }
 
 .filter-range span {
-  color: var(--vk-text-secondary);
+  color: var(--tg-text-secondary);
   font-size: 14px;
 }
 
 .filter-group select {
   width: 100%;
   padding: 8px 12px;
-  background: var(--vk-hover);
-  border: 1px solid var(--vk-border);
+  background: var(--tg-hover);
+  border: 1px solid var(--tg-border);
   border-radius: 6px;
-  color: var(--vk-text);
+  color: var(--tg-text);
   font-size: 14px;
   font-family: inherit;
   cursor: pointer;
@@ -266,8 +266,8 @@
 
 .filter-group select:focus {
   outline: none;
-  background: var(--vk-bg-content);
-  border-color: var(--vk-blue);
+  background: var(--tg-bg-content);
+  border-color: var(--tg-blue);
 }
 
 .filter-sort {
@@ -289,12 +289,12 @@
 }
 
 .search-suggestions::-webkit-scrollbar-thumb {
-  background: var(--vk-border);
+  background: var(--tg-border);
   border-radius: 3px;
 }
 
 .search-suggestions::-webkit-scrollbar-thumb:hover {
-  background: var(--vk-text-secondary);
+  background: var(--tg-text-secondary);
 }
 
 /* Responsive */
