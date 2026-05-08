@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import StatsView from './components/StatsView';
 import ProfileView from './components/ProfileView';
 import EventsView from './components/EventsView';
+import SettingsView from './components/SettingsView';
 import SearchBar from './components/SearchBar';
 import PWAInstallPrompt from './components/PWAInstallPrompt';
 import './App.css';
@@ -379,7 +380,10 @@ function App() {
               <span>События</span>
             </button>
             <div className="vk-menu-divider"></div>
-            <button className="vk-menu-item">
+            <button
+              className={`vk-menu-item ${view === 'settings' ? 'active' : ''}`}
+              onClick={() => setView('settings')}
+            >
               <span className="vk-menu-icon">⚙️</span>
               <span>Настройки</span>
             </button>
@@ -618,6 +622,7 @@ function App() {
           {view === 'stats' && <StatsView currentUser={currentUser} period={period} />}
           {view === 'profile' && <ProfileView currentUser={currentUser} onUserUpdate={setCurrentUser} />}
           {view === 'events' && <EventsView currentUser={currentUser} />}
+          {view === 'settings' && <SettingsView currentUser={currentUser} isPremium={false} />}
         </main>
 
         {/* Right Sidebar - Stats & Users */}
