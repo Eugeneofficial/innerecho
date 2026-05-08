@@ -1,0 +1,242 @@
+.stats-view {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stats-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: var(--vk-bg-content);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 0 0 var(--vk-border), 0 0 0 1px var(--vk-shadow);
+}
+
+.stats-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--vk-text);
+  margin: 0;
+}
+
+.compare-btn {
+  padding: 8px 16px;
+  background: var(--vk-hover);
+  border: 1px solid var(--vk-border);
+  border-radius: 8px;
+  color: var(--vk-text);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.compare-btn:hover {
+  background: var(--vk-bg);
+}
+
+.compare-btn.active {
+  background: var(--vk-blue);
+  border-color: var(--vk-blue);
+  color: white;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  background: var(--vk-bg-content);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  box-shadow: 0 1px 0 0 var(--vk-border), 0 0 0 1px var(--vk-shadow);
+  transition: all 0.15s ease;
+}
+
+.stat-card:hover {
+  box-shadow: 0 2px 4px var(--vk-shadow);
+}
+
+.stat-card-icon {
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-card-label {
+  font-size: 12px;
+  color: var(--vk-text-secondary);
+  font-weight: 400;
+}
+
+.stat-card-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--vk-text);
+}
+
+.stat-card-goal {
+  font-size: 12px;
+  color: var(--vk-text-secondary);
+}
+
+.stat-card-progress {
+  height: 4px;
+  background: var(--vk-border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.stat-card-progress-fill {
+  height: 100%;
+  background: var(--vk-blue);
+  transition: width 0.3s ease;
+}
+
+.stat-card-progress-fill.protein {
+  background: #10b981;
+}
+
+.stat-card-progress-fill.fats {
+  background: #f59e0b;
+}
+
+.stat-card-progress-fill.carbs {
+  background: #8b5cf6;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 12px;
+}
+
+.chart-card {
+  background: var(--vk-bg-content);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 0 0 var(--vk-border), 0 0 0 1px var(--vk-shadow);
+}
+
+.chart-card h3 {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--vk-text);
+}
+
+.comparison-section {
+  background: var(--vk-bg-content);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 0 0 var(--vk-border), 0 0 0 1px var(--vk-shadow);
+}
+
+.comparison-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--vk-text);
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.comparison-card {
+  background: var(--vk-hover);
+  border: 1px solid var(--vk-border);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.comparison-label {
+  font-size: 12px;
+  color: var(--vk-text-secondary);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.comparison-values {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comparison-value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: var(--vk-bg-content);
+  border-radius: 6px;
+}
+
+.comparison-user {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--vk-text);
+}
+
+.comparison-number {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--vk-blue);
+}
+
+.stats-loading,
+.stats-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  font-size: 13px;
+  color: var(--vk-text-secondary);
+  background: var(--vk-bg-content);
+  border-radius: 8px;
+  box-shadow: 0 1px 0 0 var(--vk-border), 0 0 0 1px var(--vk-shadow);
+}
+
+.stats-error {
+  color: var(--vk-red);
+}
+
+@media (max-width: 1024px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    flex-direction: row;
+  }
+}

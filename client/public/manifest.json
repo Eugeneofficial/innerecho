@@ -1,0 +1,63 @@
+{
+  "short_name": "InnerEcho",
+  "name": "InnerEcho - Совместный контроль питания",
+  "description": "Приложение для совместного контроля питания с партнёром. Ведите общий дневник питания, видите прогресс друг друга.",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#2787F5",
+  "background_color": "#19191A",
+  "orientation": "portrait-primary",
+  "categories": ["health", "lifestyle", "food"],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "type": "image/png",
+      "sizes": "540x720"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Добавить приём пищи",
+      "short_name": "Добавить",
+      "description": "Быстро добавить новый приём пищи",
+      "url": "/?action=add",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Статистика",
+      "short_name": "Статистика",
+      "description": "Посмотреть статистику питания",
+      "url": "/?view=stats",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "files": [
+        {
+          "name": "photo",
+          "accept": ["image/*"]
+        }
+      ]
+    }
+  }
+}
